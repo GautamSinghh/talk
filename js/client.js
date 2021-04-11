@@ -1,7 +1,7 @@
 const socket = io('http://localhost:8000');
 
 const form = document.getElementById('send-container');
-const messageInput =document.getElementById('#messageInp');
+const messageInput =document.getElementById('messageInp');
 const messageContainer = document.querySelector('.container');
 
 const append = (message , position) =>{
@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) =>{
     messageInput.value = '';
 })
 const name = prompt('enter your name');
-socket.emit('new-user-joined', name );
+socket.emit('new-user-joined', name);
 
 socket.on('user-joined', name=>{
     append(`${name} joined the chat`, 'right');
@@ -29,6 +29,5 @@ socket.on('receive', data=>{
 })
 socket.on('left', name=>{
     append(`${name} left the chat`, 'left');
-    console.log(message);
 })
 
