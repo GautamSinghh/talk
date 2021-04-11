@@ -1,0 +1,14 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "this is the node server fo chat aplication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gautam singh",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.0.1"
+  }
+}
